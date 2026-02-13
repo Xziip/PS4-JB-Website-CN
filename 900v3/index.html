@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PS4 9.00 FW Host v3.0 by GamerHack | Automatic Exploitation</title>
+<title>PS4 9.00 固件主机 v3.0 by Xziip | 自动破解</title>
 <link rel="stylesheet" href="../style.css">
 <script src="int64.js"></script>
 <script src="rop.js"></script>
@@ -12,96 +12,100 @@
 <script>
 if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </script>
-<h1 id="msgs">PS4 9.00 FW Host v3.0 by GamerHack</h1>
+<h1 id="msgs">PS4 9.00 固件主机 v3.0 by Xziip</h1>
 <hr>
+<div style="background-color: #ff4444; padding: 10px; margin: 15px 0; border-radius: 8px; border: 2px solid #ff0000;">
+<h2 style="color: #fff; margin: 0; font-size: 16px;">免责声明</h2>
+<p style="color: #fff; margin: 8px 0 0 0; font-size: 14px;">本网站内容仅供学习研究使用。使用本网站提供的任何工具或信息，您需自行承担所有风险和责任。请遵守当地法律法规。</p>
+</div>
 <br>
 <div id="progress">
-<h1 id="msgs2" style="font-size: 30px;margin-top: 77px;margin-bottom: 412px;">Loading Jailbreak... Please Wait</h1>
+<h1 id="msgs2" style="font-size: 30px;margin-top: 77px;margin-bottom: 412px;">正在加载越狱... 请稍候</h1>
 </div>
 <div id="menu" style="display: none">
-<h1 style="font-size: 18px;color: yellow;">Main Payloads</h1>
-<button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.4b18.9 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_goldhenbeta()"> GoldHEN v2.4b18.9 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.3 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_goldhen23()"> GoldHEN v2.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_binloader()"> Bin Loader </button>
+<h1 style="font-size: 18px;color: yellow;">主要负载</h1>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.4b18.9 for 9.00 固件'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_goldhenbeta()"> GoldHEN v2.4b18.9 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.3 for 9.00 固件'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_goldhen23()"> GoldHEN v2.3 </button>
+<button class="btn" onmouseover="msgs.innerHTML='使用9020端口发送负载'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_binloader()"> Bin Loader </button>
 <br>
-<h1 style="font-size: 18px;">Payloads</h1>
-<button class="btn" onmouseover="msgs.innerHTML='Dump Game Only to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Gdumper()"> Game-Dumper </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump Update Only to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Udumper()"> Update-Dumper </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump Separate Game and Update to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_SGUdumper()"> SGU-Dumper </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump Merged Game and Update to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_MGUdumper()"> MGU-Dumper </button>
+<h1 style="font-size: 18px;">负载</h1>
+<button class="btn" onmouseover="msgs.innerHTML='仅将游戏转储到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Gdumper()"> Game-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='仅将更新转储到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Udumper()"> Update-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='分别转储游戏和更新到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_SGUdumper()"> SGU-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='将游戏和更新合并转储到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_MGUdumper()"> MGU-Dumper </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Enable Some Debugging Functions Available on TestKit'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_todex()"> ToDex </button>
-<a href="webactivator.html"><button class="btn" onmouseover="msgs.innerHTML='Activate Your User Account from the Console Browser'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'"> Web-Activator </button></a>
-<button class="btn" onmouseover="msgs.innerHTML='Access this console Through FTP (Be careful what you do)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_ftp()"> FTP </button>
-<button class="btn" onmouseover="msgs.innerHTML='Transfer Installed Games to USB Drive in exFAT'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_app2usb()"> App2USB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Create a Backup of the Database and Users to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_dbackup()"> DB Backup </button>
-<button class="btn" onmouseover="msgs.innerHTML='Restore a Backup of the Database and Users from a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_dbrestore()"> DB Restore </button>
+<button class="btn" onmouseover="msgs.innerHTML='启用TestKit上可用的某些调试功能'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_todex()"> ToDex </button>
+<a href="webactivator.html"><button class="btn" onmouseover="msgs.innerHTML='从主机浏览器激活您的用户账户'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'"> Web-Activator </button></a>
+<button class="btn" onmouseover="msgs.innerHTML='通过FTP访问此主机（请谨慎操作）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_ftp()"> FTP </button>
+<button class="btn" onmouseover="msgs.innerHTML='将已安装的游戏转移到exFAT格式的USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_app2usb()"> App2USB </button>
+<button class="btn" onmouseover="msgs.innerHTML='创建数据库和用户的备份到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_dbackup()"> DB Backup </button>
+<button class="btn" onmouseover="msgs.innerHTML='从USB磁盘恢复数据库和用户的备份'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_dbrestore()"> DB Restore </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Enable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_enablebUpdates()"> Enable Updates </button>
-<button class="btn" onmouseover="msgs.innerHTML='Disable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_disableUpdates()"> Disable Updates </button>
-<button class="btn" onmouseover="msgs.innerHTML='Enable/Disable Browser History.'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_historyBlocker()"> History Blocker </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump a Console Kernel to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_kernelDump()"> Kernel Dumper </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump a Kernel Module to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_moduleDump()"> Module Dumper </button>
-<button class="btn" onmouseover="msgs.innerHTML='PS4 Debug for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_ps4debug()"> PS4 Debug </button>
+<button class="btn" onmouseover="msgs.innerHTML='启用系统更新'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_enablebUpdates()"> Enable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='禁用系统更新'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_disableUpdates()"> Disable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='启用/禁用浏览器历史记录'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_historyBlocker()"> History Blocker </button>
+<button class="btn" onmouseover="msgs.innerHTML='将主机内核转储到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_kernelDump()"> Kernel Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='将内核模块转储到USB磁盘'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_moduleDump()"> Module Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 Debug for 9.00 固件'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_ps4debug()"> PS4 Debug </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Disables the ASLR (Address space layout randomization)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_disbAslr()"> Disable ASLR </button>
-<button class="btn" onmouseover="msgs.innerHTML='Disable IDU Mode if you have activated it by mistake'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_exitidu()"> Exit IDU </button>
-<button class="btn" onmouseover="msgs.innerHTML='Renames (fake) RIFs to (free) RIFs'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_rifRen()"> RIF Renamer </button>
-<button class="btn" onmouseover="msgs.innerHTML='Permanent UART for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_permUart()"> Permanent UART </button>
-<button class="btn" onmouseover="msgs.innerHTML='Required to Activate Cheats Through the PS4 Trainer Website'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_webrte()"> WebRTE </button>
-<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-onln" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'"> PS4 Trainer Web </button></a>
+<button class="btn" onmouseover="msgs.innerHTML='禁用ASLR（地址空间布局随机化）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_disbAslr()"> Disable ASLR </button>
+<button class="btn" onmouseover="msgs.innerHTML='如果您错误激活了IDU模式，请禁用它'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_exitidu()"> Exit IDU </button>
+<button class="btn" onmouseover="msgs.innerHTML='将（假）RIF重命名为（免费）RIF'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_rifRen()"> RIF Renamer </button>
+<button class="btn" onmouseover="msgs.innerHTML='Permanent UART for 9.00 固件'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_permUart()"> Permanent UART </button>
+<button class="btn" onmouseover="msgs.innerHTML='通过PS4 Trainer网站激活作弊所需'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_webrte()"> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-onln" onmouseover="msgs.innerHTML='PS4 Trainer 网站（请遵循那里的说明）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'"> PS4 Trainer Web </button></a>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Linux Loaders Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="linux_group()" style="margin-left: 69px"> Linux Loaders </button>
-<button class="btn btn-onln" onmouseover="msgs.innerHTML='Games Mods (Hosted Online)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="mods_group()"> Games-Mods (Online) </button>
-<button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_toolbox()"> Orbis-Toolbox </button>
-<button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_fanthreshold()" style="margin-bottom: 70px"> Fan Threshold </button><select id="tempC"></select>°C
+<button class="btn" onmouseover="msgs.innerHTML='Linux 加载器菜单'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="linux_group()" style="margin-left: 69px"> Linux Loaders </button>
+<button class="btn btn-onln" onmouseover="msgs.innerHTML='游戏Mods（在线托管）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="mods_group()"> Games-Mods (Online) </button>
+<button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 固件'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_toolbox()"> Orbis-Toolbox </button>
+<button class="btn" onmouseover="msgs.innerHTML='修改PS4风扇速度'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_fanthreshold()" style="margin-bottom: 70px"> Fan Threshold </button><select id="tempC"></select>°C
 </div>
 <div id="lnx">
-<h1 style="font-size: 18px;color: yellow;">Linux Payloads</h1>
-<button class="btn" onmouseover="msgs.innerHTML='Identify the Southbridge of your Console for the Linux Installation'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_southbridge()"> Whos that Southbridge </button>
+<h1 style="font-size: 18px;color: yellow;">Linux 负载</h1>
+<button class="btn" onmouseover="msgs.innerHTML='识别您主机的南桥以便Linux安装'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_southbridge()"> Whos that Southbridge </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 1GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linux1gb()"> Linux 1GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 2GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linux2gb()"> Linux 2GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 3GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linux3gb()"> Linux 3GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 4GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linux4gb()"> Linux 4GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='加载拥有1GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linux1gb()"> Linux 1GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='加载拥有2GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linux2gb()"> Linux 2GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='加载拥有3GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linux3gb()"> Linux 3GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='加载拥有4GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linux4gb()"> Linux 4GB </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 1GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linuxPS4Pro1gb()"> Linux 1GB (PS4-Pro) </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 2GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linuxPS4Pro2gb()"> Linux 2GB (PS4-Pro) </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 3GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linuxPS4Pro3gb()"> Linux 3GB (PS4-Pro) </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 4GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_linuxPS4Pro4gb()"> Linux 4GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='为（PS4-Pro）加载拥有1GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linuxPS4Pro1gb()"> Linux 1GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='为（PS4-Pro）加载拥有2GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linuxPS4Pro2gb()"> Linux 2GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='为（PS4-Pro）加载拥有3GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linuxPS4Pro3gb()"> Linux 3GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='为（PS4-Pro）加载拥有4GB VRAM的Linux（PSXita）'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_linuxPS4Pro4gb()"> Linux 4GB (PS4-Pro) </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_menu()" style="margin-bottom: 241px"> Return </button>
+<button class="btn" onmouseover="msgs.innerHTML='返回主菜单'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_menu()" style="margin-bottom: 241px"> 返回 </button>
 </div>
 <div id="mods">
-<h1 style="font-size: 18px;color: yellow;">Online Payloads</h1>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_arabicGuy100()"> Arabic Guy v1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_arabicGuy127()"> Arabic Guy v1.27 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.32 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_arabicGuy132()"> Arabic Guy v1.32 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.33 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_arabicGuy133()"> Arabic Guy v1.33 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Expulsion v4.0 - 1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Expulsion()"> Expulsion v4.0 - 1.38 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Lamance()"> Lamance v0.9 - 1.38 </button>
+<h1 style="font-size: 18px;color: yellow;">在线负载</h1>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_arabicGuy100()"> Arabic Guy v1.00 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_arabicGuy127()"> Arabic Guy v1.27 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.32 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_arabicGuy132()"> Arabic Guy v1.32 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.33 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_arabicGuy133()"> Arabic Guy v1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Expulsion v4.0 - 1.38'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Expulsion()"> Expulsion v4.0 - 1.38 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Lamance()"> Lamance v0.9 - 1.38 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz132()"> WildeModz-1.32 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz133()"> WildeModz-1.33 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz138()"> WildeModz-1.38 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.46'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz146()"> WildeModz-1.46 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.47'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz147()"> WildeModz-1.47 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_WildeModz132()"> WildeModz-1.32 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_WildeModz133()"> WildeModz-1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_WildeModz138()"> WildeModz-1.38 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.46'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_WildeModz146()"> WildeModz-1.46 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.47'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_WildeModz147()"> WildeModz-1.47 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef133()"> Beef Queef Mod v1.33 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef134()"> Beef Queef Mod v1.34 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef138()"> Beef Queef Mod v1.38d </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.47'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef147()"> Beef Queef Mod v1.47 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_beefQueef133()"> Beef Queef Mod v1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_beefQueef134()"> Beef Queef Mod v1.34 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_beefQueef138()"> Beef Queef Mod v1.38d </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.47'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_beefQueef147()"> Beef Queef Mod v1.47 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.00'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters100()"> RDR2 v1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.13'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters113()"> RDR2 v1.13 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.19'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters119()"> RDR2 v1.19 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.00'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Oysters100()"> RDR2 v1.00 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.13'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Oysters113()"> RDR2 v1.13 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.19'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Oysters119()"> RDR2 v1.19 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_menu()" style="margin-bottom: 179px"> Return </button>
+<button class="btn" onmouseover="msgs.innerHTML='返回主菜单'" onmouseout="msgs.innerHTML='PS4 9.00 固件主机 v3.0 by Xziip'" onclick="load_menu()" style="margin-bottom: 179px"> 返回 </button>
 </div>
 <br>
-<h1 style="margin-top: 22px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
+<h1 style="margin-top: 22px;">特别鸣谢：<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
 <script>
 function jbdone(){
 document.getElementById("menu").style.display = "block";
@@ -229,8 +233,8 @@ function load_binloader(){
         chain.fcall(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_loader, payload_buffer);
     }
     chain.run();
-	LoadedMSG = "Bin Loader Launched ...";
-	alert("Waiting for Payload... Send it using the PS4 IP and port 9020");
+	LoadedMSG = "Bin Loader 已启动 ...";
+	alert("等待负载... 使用PS4 IP和9020端口发送它");
 	allset();
 	}
 
@@ -252,7 +256,7 @@ for(var i=40; i<=75; i=i+5){
 tempC.value=60;
 
 function load_linux1gb(){
-msgs.innerHTML="Linux Loader 1GB Launched ...";
+msgs.innerHTML="Linux 加载器 1GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -264,7 +268,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linux2gb(){
-msgs.innerHTML="Linux Loader 2GB Launched ...";
+msgs.innerHTML="Linux 加载器 2GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -276,7 +280,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linux3gb(){
-msgs.innerHTML="Linux Loader 3GB Launched ...";
+msgs.innerHTML="Linux 加载器 3GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -288,7 +292,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linux4gb(){
-msgs.innerHTML="Linux Loader 4GB Launched ...";
+msgs.innerHTML="Linux 加载器 4GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -300,7 +304,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linuxPS4Pro1gb(){
-msgs.innerHTML="Linux Loader 1GB Launched ...";
+msgs.innerHTML="Linux 加载器 1GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -312,7 +316,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linuxPS4Pro2gb(){
-msgs.innerHTML="Linux Loader 2GB Launched ...";
+msgs.innerHTML="Linux 加载器 2GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -324,7 +328,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linuxPS4Pro3gb(){
-msgs.innerHTML="Linux Loader 3GB Launched ...";
+msgs.innerHTML="Linux 加载器 3GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -336,7 +340,7 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_linuxPS4Pro4gb(){
-msgs.innerHTML="Linux Loader 4GB Launched ...";
+msgs.innerHTML="Linux 加载器 4GB 已启动 ...";
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
 +loadScript('rop2.js')
@@ -348,271 +352,271 @@ setTimeout(loadScript("netcat.js")
 }
 
 function load_goldhenbeta(){
-LoadedMSG = "GoldHEN v2.4b18.9 Loaded ...";
+LoadedMSG = "GoldHEN v2.4b18.9 加载完成 ...";
 PLfile = "goldhen_2.4b18.9.bin";
 load_poc();
 }
 
 function load_goldhen23(){
-LoadedMSG = "GoldHEN v2.3 Loaded ...";
+LoadedMSG = "GoldHEN v2.3 加载完成 ...";
 PLfile = "goldhen_2.3.bin";
 load_poc();
 }
 
 function load_Gdumper(){
-LoadedMSG = "Game-Dumper Loaded ...";
+LoadedMSG = "Game-Dumper 加载完成 ...";
 PLfile = "dumperG.bin";
 load_poc();
 }
 
 function load_Udumper(){
-LoadedMSG = "Update-Dumper Loaded ...";
+LoadedMSG = "Update-Dumper 加载完成 ...";
 PLfile = "dumperU.bin";
 load_poc();
 }
 
 function load_SGUdumper(){
-LoadedMSG = "Separate Game and Update Dumper Loaded ...";
+LoadedMSG = "Separate Game and Update Dumper 加载完成 ...";
 PLfile = "dumperSGU.bin";
 load_poc();
 }
 
 function load_MGUdumper(){
-LoadedMSG = "Merged Game and Update Dumper Loaded ...";
+LoadedMSG = "Merged Game and Update Dumper 加载完成 ...";
 PLfile = "dumperMGU.bin";
 load_poc();
 }
 
 function load_todex(){
-LoadedMSG = "ToDex Loaded ...";
+LoadedMSG = "ToDex 加载完成 ...";
 PLfile = "todex.bin";
 load_poc();
 }
 
 function load_ftp(){
-LoadedMSG = "FTP Loaded ..."
+LoadedMSG = "FTP 加载完成 ..."
 PLfile = "ftp.bin";
 load_poc();
 }
 
 function load_app2usb(){
-LoadedMSG = "App2USB Loaded ..."
+LoadedMSG = "App2USB 加载完成 ..."
 PLfile = "app2usb.bin";
 load_poc();
 }
 
 function load_dbackup(){
-LoadedMSG = "DB Backup Loaded ..."
+LoadedMSG = "DB Backup 加载完成 ..."
 PLfile = "backup.bin";
 load_poc();
 }
 
 function load_dbrestore(){
-LoadedMSG = "DB Restore Loaded ..."
+LoadedMSG = "DB Restore 加载完成 ..."
 PLfile = "restore.bin";
 load_poc();
 }
 
 function load_enablebUpdates(){
-LoadedMSG = "Enable Updates Loaded ..."
+LoadedMSG = "Enable Updates 加载完成 ..."
 PLfile = "enable-updates.bin";
 load_poc();
 }
 
 function load_disableUpdates(){
-LoadedMSG = "Disable Updates Loaded ..."
+LoadedMSG = "Disable Updates 加载完成 ..."
 PLfile = "disable-updates.bin";
 load_poc();
 }
 
 function load_historyBlocker(){
-LoadedMSG = "History Blocker Loaded ..."
+LoadedMSG = "History Blocker 加载完成 ..."
 PLfile = "history-blocker.bin";
 load_poc();
 }
 
 function load_kernelDump(){
-LoadedMSG = "Kernel Dumper Loaded ..."
+LoadedMSG = "Kernel Dumper 加载完成 ..."
 PLfile = "kernel-dumper.bin";
 load_poc();
 }
 
 function load_moduleDump(){
-LoadedMSG = "Module Dumper Loaded ..."
+LoadedMSG = "Module Dumper 加载完成 ..."
 PLfile = "module-dumper.bin";
 load_poc();
 }
 
 function load_ps4debug(){
-LoadedMSG = "PS4 Debug Loaded ..."
+LoadedMSG = "PS4 Debug 加载完成 ..."
 PLfile = "ps4debug.bin";
 load_poc();
 }
 
 function load_disbAslr(){
-LoadedMSG = "Disable ASLR Loaded ..."
+LoadedMSG = "Disable ASLR 加载完成 ..."
 PLfile = "disable-aslr.bin";
 load_poc();
 }
 
 function load_exitidu(){
-LoadedMSG = "Exit IDU Loaded ..."
+LoadedMSG = "Exit IDU 加载完成 ..."
 PLfile = "exit-idu.bin";
 load_poc();
 }
 
 function load_rifRen(){
-LoadedMSG = "RIF Renamer Loaded ..."
+LoadedMSG = "RIF Renamer 加载完成 ..."
 PLfile = "rif-renamer.bin";
 load_poc();
 }
 
 function load_permUart(){
-LoadedMSG = "Permanent UART Loaded ..."
+LoadedMSG = "Permanent UART 加载完成 ..."
 PLfile = "permanent-uart.bin";
 load_poc();
 }
 
 function load_webrte(){
-LoadedMSG = "WebRTE Loaded ..."
+LoadedMSG = "WebRTE 加载完成 ..."
 PLfile = "webrte.bin";
 load_poc();
 }
 
 function load_toolbox(){
-LoadedMSG = "Orbis-Toolbox Loaded ..."
+LoadedMSG = "Orbis-Toolbox 加载完成 ..."
 PLfile = "Orbis-Toolbox-900.bin";
 load_poc();
 }
 
 function load_fanthreshold(){
-LoadedMSG="Fan Threshold Loaded ..."
+LoadedMSG="Fan Threshold 加载完成 ..."
 PLfile = "fan-threshold"+tempC.value+".bin";
 load_poc();
 }
 
 function load_southbridge(){
-LoadedMSG = "Payload Loaded ..."
+LoadedMSG = "Payload 加载完成 ..."
 PLfile = "southbridge.bin";
 load_poc();
 }
 
 function load_arabicGuy100(){
-LoadedMSG = "Arabic Guy v1.00 Loaded ..."
+LoadedMSG = "Arabic Guy v1.00 加载完成 ..."
 PLfile = "arabic-guy100.bin";
 load_poc();
 }
 
 function load_arabicGuy127(){
-LoadedMSG = "Arabic Guy v1.27 Loaded ..."
+LoadedMSG = "Arabic Guy v1.27 加载完成 ..."
 PLfile = "arabic-guy127.bin";
 load_poc();
 }
 
 function load_arabicGuy132(){
-LoadedMSG = "Arabic Guy v1.32 Loaded ..."
+LoadedMSG = "Arabic Guy v1.32 加载完成 ..."
 PLfile = "arabic-guy132.bin";
 load_poc();
 }
 
 function load_arabicGuy133(){
-LoadedMSG = "Arabic Guy v1.33 Loaded ..."
+LoadedMSG = "Arabic Guy v1.33 加载完成 ..."
 PLfile = "arabic-guy133.bin";
 load_poc();
 }
 
 function load_Expulsion(){
-LoadedMSG = "Expulsion v4.0 Loaded ..."
+LoadedMSG = "Expulsion v4.0 加载完成 ..."
 PLfile = "Expulsion-V4.0-1.38.bin";
 load_poc();
 }
 
 function load_Lamance(){
-LoadedMSG = "Lamance v0.9 Loaded ..."
+LoadedMSG = "Lamance v0.9 加载完成 ..."
 PLfile = "Lamance-v0.9-1.38.bin";
 load_poc();
 }
 
 function load_WildeModz132(){
-LoadedMSG = "WildeModz-1.32 Loaded ..."
+LoadedMSG = "WildeModz-1.32 加载完成 ..."
 PLfile = "WildeModz-1.32.bin";
 load_poc();
 }
 
 function load_WildeModz133(){
-LoadedMSG = "WildeModz-1.33 Loaded ..."
+LoadedMSG = "WildeModz-1.33 加载完成 ..."
 PLfile = "WildeModz-1.33.bin";
 load_poc();
 }
 
 function load_WildeModz138(){
-LoadedMSG = "WildeModz-1.38 Loaded ..."
+LoadedMSG = "WildeModz-1.38 加载完成 ..."
 PLfile = "WildeModz-1.38.bin";
 load_poc();
 }
 
 function load_WildeModz146(){
-LoadedMSG = "WildeModz-1.46 Loaded ..."
+LoadedMSG = "WildeModz-1.46 加载完成 ..."
 PLfile = "WildeModz-1.46.bin";
 load_poc();
 }
 
 function load_WildeModz147(){
-LoadedMSG = "WildeModz-1.47 Loaded ..."
+LoadedMSG = "WildeModz-1.47 加载完成 ..."
 PLfile = "WildeModz-1.47.bin";
 load_poc();
 }
 
 function load_beefQueef133(){
-LoadedMSG = "Beef Queef Mod v1.33 Loaded ..."
+LoadedMSG = "Beef Queef Mod v1.33 加载完成 ..."
 PLfile = "BeefQueefMod-133.bin";
 load_poc();
 }
 
 function load_beefQueef134(){
-LoadedMSG = "Beef Queef Mod v1.34 Loaded ..."
+LoadedMSG = "Beef Queef Mod v1.34 加载完成 ..."
 PLfile = "BeefQueefMod-134.bin";
 load_poc();
 }
 
 function load_beefQueef138(){
-LoadedMSG = "Beef Queef Mod v1.38d Loaded ..."
+LoadedMSG = "Beef Queef Mod v1.38d 加载完成 ..."
 PLfile = "BeefQueefMod-138d.bin";
 load_poc();
 }
 
 function load_beefQueef147(){
-LoadedMSG = "Beef Queef Mod v1.47 Loaded ..."
+LoadedMSG = "Beef Queef Mod v1.47 加载完成 ..."
 PLfile = "BeefQueefMod-Unified-147e.bin";
 load_poc();
 }
 
 function load_Oysters100(){
-LoadedMSG = "Oysters Menu v1.00 Loaded ..."
+LoadedMSG = "Oysters Menu v1.00 加载完成 ..."
 PLfile = "OystersMenu-v1.00.bin";
 load_poc();
 }
 
 function load_Oysters113(){
-LoadedMSG = "Oysters Menu v1.13 Loaded ..."
+LoadedMSG = "Oysters Menu v1.13 加载完成 ..."
 PLfile = "OystersMenu-v1.13.bin";
 load_poc();
 }
 
 function load_Oysters119(){
-LoadedMSG = "Oysters Menu v1.19 Loaded ..."
+LoadedMSG = "Oysters Menu v1.19 加载完成 ..."
 PLfile = "OystersMenu-v1.19.bin";
 load_poc();
 }
 
 function load_Oysters124(){
-LoadedMSG = "Oysters Menu v1.24 Loaded ..."
+LoadedMSG = "Oysters Menu v1.24 加载完成 ..."
 PLfile = "OystersMenu-v1.24.bin";
 load_poc();
 }
 
 function load_Oysters129(){
-LoadedMSG = "Oysters Menu v1.29 Loaded ..."
+LoadedMSG = "Oysters Menu v1.29 加载完成 ..."
 PLfile = "OystersMenu-v1.29.bin";
 load_poc();
 }

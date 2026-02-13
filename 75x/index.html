@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
 <head>
-<title>PS4 7.50 - 7.55 FW Host v1.5 by GamerHack</title>
+<title>PS4 7.50 - 7.55 固件主机 v1.5 by Xziip</title>
 <link rel="stylesheet" href="../style.css">
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="正在安装离线缓存: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="缓存安装成功 ✔";},1000);setTimeout(function(){window.msgs.innerHTML="现在关闭并重新打开您的浏览器...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 document.cookie = 'kex=1';
 </script>
 </head>
 <body>
 <div id="menu">
-<h1 id="msgs">PS4 7.50 - 7.55 FW Host v1.5 by GamerHack</h1>
+<h1 id="msgs">PS4 7.50 - 7.55 固件主机 v1.5 by Xziip</h1>
 <hr>
+<div style="background-color: #ff4444; padding: 10px; margin: 15px 0; border-radius: 8px; border: 2px solid #ff0000;">
+<h2 style="color: #fff; margin: 0; font-size: 16px;">免责声明</h2>
+<p style="color: #fff; margin: 8px 0 0 0; font-size: 14px;">本网站内容仅供学习研究使用。使用本网站提供的任何工具或信息，您需自行承担所有风险和责任。请遵守当地法律法规。</p>
+</div>
 <br>
-<h1 style="font-size: 18px;color: yellow;">Main Payloads</h1>
+<h1 style="font-size: 18px;color: yellow;">主要负载</h1>
 <button class="btn" onmouseover="mainpayload0()" onmouseout="pagetitle()" onclick="load_goldhenbeta()"> GoldHEN v2.4b18.9 </button>
 <button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick="load_goldhen23()"> GoldHEN v2.3 </button>
 <button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick="load_mira75x()"> MIRA 7.5x </button>
-<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick="load_binloader()"> Bin Loader </button>
+<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick="load_binloader()"> Bin 加载器 </button>
 <br>
-<h1 style="font-size: 18px;">Payloads</h1>
+<h1 style="font-size: 18px;">负载</h1>
 <button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick="load_todex()"> ToDex </button>
 <button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick="load_dumper()"> Dumper </button>
 <button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick="load_ftp()"> FTP </button>
 <button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick="load_app2usb()"> App2USB </button>
 <br>
-<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick="load_enablebUpdates()"> Enable Updates </button>
-<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick="load_disableUpdates()"> Disable Updates </button>
-<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick="load_dbackup()"> DB Backup </button>
-<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick="load_dbrestore()"> DB Restore </button>
+<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick="load_enablebUpdates()"> 启用更新 </button>
+<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick="load_disableUpdates()"> 禁用更新 </button>
+<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick="load_dbackup()"> 数据库备份 </button>
+<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick="load_dbrestore()"> 数据库恢复 </button>
 <br>
-<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick="load_historyBlocker()"> History Blocker </button>
-<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick="load_ebrowser()"> Enable Browser </button>
-<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick="load_kernelDump()"> Kernel Dumper </button>
-<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick="load_kernelClock()"> Kernel Clock </button>
+<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick="load_historyBlocker()"> 历史记录屏蔽 </button>
+<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick="load_ebrowser()"> 启用浏览器 </button>
+<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick="load_kernelDump()"> 内核转储 </button>
+<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick="load_kernelClock()"> 内核时钟 </button>
 <br>
 <button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick="load_ps4debug()"> PS4 Debug </button>
-<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick="load_disbAslr()"> Disable ASLR </button>
-<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick="load_rifRen()"> RIF Renamer </button>
-<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick="load_fanthreshold()"> Fan Threshold </button><select id="tempC"></select>&#176;C
+<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick="load_disbAslr()"> 禁用 ASLR </button>
+<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick="load_rifRen()"> RIF 重命名 </button>
+<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick="load_fanthreshold()"> 风扇阈值 </button><select id="tempC"></select>&#176;C
 <br>
-<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick="load_webact()"> Web-Activator </button>
-<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick="load_exitidu()"> Exit IDU </button>
+<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick="load_webact()"> 网页激活 </button>
+<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick="load_exitidu()"> 退出 IDU </button>
 <button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick="load_linux1gb()"> Linux 1GB </button>
 <button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick="load_linux3gb()"> Linux 3GB </button>
 <br>
-<button class="btn" onmouseover="mods()" onmouseout="pagetitle()" onclick="mods_group()"> Games Mods </button>
-<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick="load_toolbox()"> Orbis-Toolbox </button>
+<button class="btn" onmouseover="mods()" onmouseout="pagetitle()" onclick="mods_group()"> 游戏 Mods </button>
+<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick="load_toolbox()"> Orbis 工具箱 </button>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick="load_webrte()"> WebRTE </button>
-<button class="btn btn-onln" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick="load_ps4trainer()"> PS4 Trainer Web </button>
+<button class="btn btn-onln" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick="load_ps4trainer()"> PS4 Trainer 网站 </button>
 </div>
 <div id="mods">
-<h1 id="msgs-mods">Games Mods</h1>
+<h1 id="msgs-mods">游戏 Mods</h1>
 <hr>
 <br>
-<h1 style="font-size: 18px;">Payloads</h1>
+<h1 style="font-size: 18px;">负载</h1>
 <button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick="load_Lamance()"> Lamance v0.9 - 1.38 </button>
 <button class="btn" onmouseover="GTAWM146()" onmouseout="pagetitle()" onclick="load_WildeModz146()"> WildeModz-1.46 </button>
 <br>
@@ -65,9 +69,9 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick="load_Oysters124()"> RDR2 v1.24 </button>
 <button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onclick="load_menu()" style="margin-bottom: 303px;"> Return </button>
+<button class="btn" onclick="load_menu()" style="margin-bottom: 303px;"> 返回 </button>
 </div>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
+<h1 style="margin-top: 43px;">特别鸣谢：<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
 function mods_group(){
 document.getElementById("mods").style.display = "block";
@@ -80,115 +84,115 @@ document.getElementById("mods").style.display = "none";
 }
 
 function mainpayload0(){
-document.getElementById("msgs").innerHTML = "GoldHEN v2.4b18.9 for Firmware 7.55 (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "GoldHEN v2.4b18.9 适用于固件 7.55（包含 CE-30391-6 临时修复）";
 }
 
 function mainpayload1(){
-document.getElementById("msgs").innerHTML = "GoldHEN v2.3 for Firmware 7.55 (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "GoldHEN v2.3 适用于固件 7.55（包含 CE-30391-6 临时修复）";
 }
 
 function mainpayload2(){
-document.getElementById("msgs").innerHTML = "MIRA for All Firmwares 7.5x";
+document.getElementById("msgs").innerHTML = "MIRA 适用于所有 7.5x 固件";
 }
 
 function mainpayload3(){
-document.getElementById("msgs").innerHTML = "Inject a Payload Using the IP of the console and Port 9021";
+document.getElementById("msgs").innerHTML = "使用控制台 IP 和端口 9021 注入负载";
 }
 
 function todex(){
-document.getElementById("msgs").innerHTML = "Enable Some Debugging Functions Available on TestKit";
+document.getElementById("msgs").innerHTML = "启用 TestKit 上可用的一些调试功能";
 }
 
 function dumper(){
-document.getElementById("msgs").innerHTML = "Dump Games to USB Drive";
+document.getElementById("msgs").innerHTML = "将游戏转储到 USB 驱动器";
 }
 
 function ftp(){
-document.getElementById("msgs").innerHTML = "Access this console Through FTP (Be careful what you do)";
+document.getElementById("msgs").innerHTML = "通过 FTP 访问此控制台（小心操作）";
 }
 
 function app2usb(){
-document.getElementById("msgs").innerHTML = "Transfer Games / Apps to USB Drive in exFAT";
+document.getElementById("msgs").innerHTML = "将游戏/应用转移到 exFAT 格式的 USB 驱动器";
 }
 
 function enableUpdates(){
-document.getElementById("msgs").innerHTML = "Enable System Updates";
+document.getElementById("msgs").innerHTML = "启用系统更新";
 }
 
 function disableUpdates(){
-document.getElementById("msgs").innerHTML = "Disable System Updates";
+document.getElementById("msgs").innerHTML = "禁用系统更新";
 }
 
 function dbackup(){
-document.getElementById("msgs").innerHTML = "Creates a Backup of the Console Database and Your User on a USB Drive";
+document.getElementById("msgs").innerHTML = "创建控制台数据库和用户的备份到 USB 驱动器";
 }
 
 function dbrestore(){
-document.getElementById("msgs").innerHTML = "Restore Database Backup from USB Drive";
+document.getElementById("msgs").innerHTML = "从 USB 驱动器恢复数据库备份";
 }
 
 function historyBlocker(){
-document.getElementById("msgs").innerHTML = "Disable Browser History, it will only show Frequently used Pages once you open";
+document.getElementById("msgs").innerHTML = "禁用浏览器历史记录，打开时仅显示常用页面";
 }
 
 function ebrowser(){
-document.getElementById("msgs").innerHTML = "Enable The PS4 Browser";
+document.getElementById("msgs").innerHTML = "启用 PS4 浏览器";
 }
 
 function kernelDump(){
-document.getElementById("msgs").innerHTML = "Dump a Conole Kernel to USB Drive";
+document.getElementById("msgs").innerHTML = "将控制台内核转储到 USB 驱动器";
 }
 
 function kernelClock(){
-document.getElementById("msgs").innerHTML = "Change the Time for the Console Kernel Clock";
+document.getElementById("msgs").innerHTML = "更改控制台内核时钟时间";
 }
 
 function ps4debug(){
-document.getElementById("msgs").innerHTML = "Activate Your User Account Offline";
+document.getElementById("msgs").innerHTML = "离线激活您的用户账户";
 }
 
 function disbaslr(){
-document.getElementById("msgs").innerHTML = "Disables the ASLR (Address space layout randomization)";
+document.getElementById("msgs").innerHTML = "禁用 ASLR（地址空间布局随机化）";
 }
 
 function rifrenamer(){
-document.getElementById("msgs").innerHTML = "Renames 'fake' RIFs to 'free' RIFs";
+document.getElementById("msgs").innerHTML = "将 'fake' RIF 重命名为 'free' RIF";
 }
 
 function fanthreshold(){
-document.getElementById("msgs").innerHTML = "Modify PS4 FAN Speed";
+document.getElementById("msgs").innerHTML = "修改 PS4 风扇速度";
 }
 
 function webact(){
-document.getElementById("msgs").innerHTML = "Activate Your User Account from the Console Browser";
+document.getElementById("msgs").innerHTML = "从控制台浏览器激活您的用户账户";
 }
 
 function exitidu(){
-document.getElementById("msgs").innerHTML = "Disable IDU Mode, if you have activated it by mistake";
+document.getElementById("msgs").innerHTML = "禁用 IDU 模式，如果您错误地激活了它";
 }
 
 function linux1gb(){
-document.getElementById("msgs").innerHTML = "Load Linux with 1GB VRAM";
+document.getElementById("msgs").innerHTML = "加载 1GB VRAM 的 Linux";
 }
 
 function linux3gb(){
-document.getElementById("msgs").innerHTML = "Load Linux with 3GB VRAM";
+document.getElementById("msgs").innerHTML = "加载 3GB VRAM 的 Linux";
 }
 
 function mods(){
-document.getElementById("msgs").innerHTML = "Games Mods";
+document.getElementById("msgs").innerHTML = "游戏 Mods";
 }
 
 function orbistoolbox(){
-document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
+document.getElementById("msgs").innerHTML = "Orbis 工具箱 Alpha Build 1167 适用于固件 7.55";
 }
 
 function webrte(){
-document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through the PS4 Trainer Website";
+document.getElementById("msgs").innerHTML = "通过 PS4 Trainer 网站激活作弊所需";
 }
 
 function ps4trainer(){
-document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
+document.getElementById("msgs").innerHTML = "PS4 Trainer 网站（遵循那里的说明）";
 }
 
 function Lamance(){
@@ -200,28 +204,28 @@ document.getElementById("msgs-mods").innerHTML = "GTA V Mod - WildeModz-1.46";
 }
 
 function RedDeadMod1(){
-document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.8";
+document.getElementById("msgs-mods").innerHTML = "荒野大镖客救赎2 Mod - Oysters Menu 1.00 v1.3.8";
 }
 
 function RedDeadMod2(){
-document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.8";
+document.getElementById("msgs-mods").innerHTML = "荒野大镖客救赎2 Mod - Oysters Menu 1.13 v1.3.8";
 }
 
 function RedDeadMod3(){
-document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.8";
+document.getElementById("msgs-mods").innerHTML = "荒野大镖客救赎2 Mod - Oysters Menu 1.19 v1.3.8";
 }
 
 function RedDeadMod4(){
-document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8";
+document.getElementById("msgs-mods").innerHTML = "荒野大镖客救赎2 Mod - Oysters Menu 1.24 v1.3.8";
 }
 
 function RedDeadMod5(){
-document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8";
+document.getElementById("msgs-mods").innerHTML = "荒野大镖客救赎2 Mod - Oysters Menu 1.29 v1.3.8";
 }
 
 function pagetitle(){
-document.getElementById("msgs").innerHTML = "PS4 7.50 - 7.55 FW Host v1.5 by GamerHack";
-document.getElementById("msgs-mods").innerHTML = "Games Mods";
+document.getElementById("msgs").innerHTML = "PS4 7.50 - 7.55 固件主机 v1.5 by Xziip";
+document.getElementById("msgs-mods").innerHTML = "游戏 Mods";
 }
 
 for(var i=40; i<=79; i++){

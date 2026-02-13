@@ -1,14 +1,10 @@
-# PS4 - PS5 Exploit Host
-PS4 Firmwares: `5.05` `6.72` `7.02` `7.5X` `9.00`
+# PS4 折腾网页
 
-PS5 Firmwares: `1.XX` `5.XX`
+PS4 固件版本：`5.05` `6.72` `7.02` `7.5X` `9.00`
 
-## Steps:
+## 使用步骤：
 
-- In the console browser go to: https://gamerhack.github.io/
-- Select the firmware of your console.
-- Immediately all content will be installed in the offline cache, once finished exit the browser and turn off the Internet.
-- Then go back to Access Browser and Enjoy.
-
-Download link for the PS5 host shortcut .pkg file:
-https://www.mediafire.com/file/dh3tzdvfmcznmrs/NPXS40138_%2528UMTX2%2529.pkg/file
+- 在主机浏览器中访问：https://ps4.xziip.me/
+- 选择您的主机固件版本。
+- 所有内容将立即安装到离线缓存中，完成后退出浏览器并关闭互联网连接。
+- 然后返回浏览器即可使用。
